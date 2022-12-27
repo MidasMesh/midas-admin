@@ -1,0 +1,13 @@
+/target
+.project
+.settings
+*/.project
+*/*/target
+*/target
+.idea
+*/logs/
+logs/
+*.iml
+.DS_Store
+
+
