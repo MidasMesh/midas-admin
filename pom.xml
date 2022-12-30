@@ -18,34 +18,66 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <springfox.version>3.0.0</springfox.version>
     </properties>
 
     <dependencies>
-            <dependency>
-                <groupId>org.xujin.halo</groupId>
-                <artifactId>halo-boot-starter-mybatis</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>org.xujin.halo</groupId>
-                <artifactId>halo-boot-starter-basic</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>org.xujin.halo</groupId>
-                <artifactId>halo-boot-starter-swagger</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>org.xujin.halo</groupId>
-                <artifactId>halo-boot-starter-test</artifactId>
-                 <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.18.8</version>
-                 <scope>provided</scope>
-            </dependency>
+        <dependency>
+            <groupId>org.xujin.halo</groupId>
+            <artifactId>halo-boot-starter-mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.xujin.halo</groupId>
+            <artifactId>halo-boot-starter-basic</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.xujin.halo</groupId>
+            <artifactId>halo-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <build>
         <plugins>
             <plugin>
